@@ -6,12 +6,13 @@ import checkHealth from '../checkHealth';
 // });
 
 test.each([
-    ['healthy', {name: 'Маг', health: 90}, 'healthy'],
-    ['wounded', {name: 'Маг', health: 40}, 'wounded'],
-    ['critical', {name: 'Маг', health: 10}, 'critical'],
-    ['dead', {name: 'Маг', health: 0}, 'dead'],
+  ['healthy', { name: 'Маг', health: 90 }, 'healthy'],
+  ['wounded', { name: 'Маг', health: 40 }, 'wounded'],
+  ['critical', { name: 'Маг', health: 10 }, 'critical'],
+  ['dead', { name: 'Маг', health: 0 }, 'dead'],
 ])(
-('%s status for %j with current hp of %d should be returned as "%s"'),
-(name, char, expected) => {
-    expect(checkHealth(char)).toBe(expected)
-})
+  ('%s status for %j with current hp of %d should be returned as "%s"'),
+  (name, char, expected) => {
+    expect(checkHealth(char)).toBe(expected);
+  },
+);
