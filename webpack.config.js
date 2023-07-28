@@ -14,5 +14,10 @@ module.exports = {
       { test: /\.css$/i, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' }), new MiniCssExtractPlugin()],
+  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' }),
+
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css',
+    })],
 };
