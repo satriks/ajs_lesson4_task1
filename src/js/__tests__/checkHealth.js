@@ -1,9 +1,9 @@
 import checkHealth from '../checkHealth';
 
-// test('check health', () => {
-//   const data = { name: 'Маг', health: 90 };
-//   expect(checkHealth(data)).toBe('healthy');
-// });
+test('check health', () => {
+  const data = { name: 'Маг', health: 90 };
+  expect(checkHealth(data)).toBe('healthy');
+});
 
 test.each([
   ['healthy', { name: 'Маг', health: 90 }, 'healthy'],
